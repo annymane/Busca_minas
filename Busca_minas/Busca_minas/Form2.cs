@@ -1,0 +1,72 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Globalization;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace Busca_minas
+{
+    public partial class Form2 : Form
+    {
+
+        private int cronometro; //variable para el conometro
+        public Form2()
+        {
+            InitializeComponent();
+            cronometro= 0;
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Form2_Load(object sender, EventArgs e)
+        {
+            //Creación de la matriz
+            int bandera = 0;
+            int iteracion = 55;
+
+            while (bandera <= 8)
+            {
+                int sumax = 1;
+                
+                for (int x = 1; x <= 9; x++)
+                {
+                    Button miboton = new Button();
+                    miboton.Location = new Point(sumax, iteracion);
+                    miboton.Size = new Size(40, 40);
+                    miboton.Name = x + ",";
+                    miboton.TabIndex = 1;
+                    miboton.Click += new EventHandler(miBoton_Click);
+                    this.Controls.Add(miboton);
+                    sumax = sumax + 40;                 
+                }
+                iteracion= iteracion + 40; // al terminar el ciclo for se le sumara 50 para que baje
+                //a la otra linea y como la vandera sigue verdadera repetira el proceso
+                bandera = bandera + 1;         
+            }
+        }
+
+        private void miBoton_Click(object sender, EventArgs e)
+        {
+            timer1.Enabled = true;
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            cronometro++;
+            label1.Text = cronometro.ToString(); //cronometro
+        }
+
+        private void salirToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+    }
+}
