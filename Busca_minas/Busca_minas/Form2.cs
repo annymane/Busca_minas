@@ -15,6 +15,9 @@ namespace Busca_minas
     {
 
         private int cronometro; //variable para el conometro
+        int[] mt = new int[100];// matriz de estado
+        Random Randoms = new Random();
+
         public Form2()
         {
             InitializeComponent();
@@ -31,32 +34,62 @@ namespace Busca_minas
             //Creación de la matriz
             int bandera = 0;
             int iteracion = 55;
+            int numeroma = 1;
+            
 
             while (bandera <= 8)
             {
                 int sumax = 1;
                 
+
                 for (int x = 1; x <= 9; x++)
                 {
                     Button miboton = new Button();
                     miboton.Location = new Point(sumax, iteracion);
                     miboton.Size = new Size(40, 40);
                     miboton.Name = x + ",";
-                    miboton.TabIndex = 1;
+                    miboton.TabIndex = numeroma;
                     miboton.Click += new EventHandler(miBoton_Click);
                     this.Controls.Add(miboton);
-                    sumax = sumax + 40;                 
+                    sumax = sumax + 40;
+                    numeroma = numeroma + 1;
                 }
-                iteracion= iteracion + 40; // al terminar el ciclo for se le sumara 50 para que baje
+                iteracion = iteracion + 40;//al terminar el ciclo for se le sumara 40 para que baje
                 //a la otra linea y como la vandera sigue verdadera repetira el proceso
-                bandera = bandera + 1;         
+                
+                bandera = bandera + 1;
+
+
+                minas();
+
+                foreach (System.Windows.Forms.Control ctrl in this.Controls) ctrl.Text = (Convert.ToString(mt[ctrl.TabIndex]));
             }
+
+            Random rnd = new Random();
+
         }
 
         private void miBoton_Click(object sender, EventArgs e)
         {
             timer1.Enabled = true;
+
         }
+
+        int recorrido, posición, temporal;// posición recorrido a, posición u, temporal t
+
+        private void minas()
+        {
+            for (int minita = 0; minita < 100; minita++) mt[minita] = minita;
+
+            for (posición = 99; posición > 0; posición--)
+            {
+                recorrido = Randoms.Next(posición);
+                temporal = mt[recorrido];
+                mt[recorrido] = mt[posición];
+                mt[posición] = temporal;
+            }
+        }
+
 
         private void timer1_Tick(object sender, EventArgs e)
         {
@@ -68,5 +101,7 @@ namespace Busca_minas
         {
             this.Close();
         }
+
+
     }
 }
