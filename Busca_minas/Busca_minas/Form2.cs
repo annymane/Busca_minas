@@ -15,8 +15,9 @@ namespace Busca_minas
     {
 
         private int cronometro; //variable para el conometro
-        int[] mt = new int[100];// matriz de estado
+        int[] mt = new int[82];// matriz de estado
         Random Randoms = new Random();
+        int[] mn = new int[15];// posiciones de las minas
 
         public Form2()
         {
@@ -79,15 +80,22 @@ namespace Busca_minas
 
         private void minas()
         {
-            for (int minita = 0; minita < 100; minita++) mt[minita] = minita;
+            for (int minita = 0; minita < 81; minita++) mt[minita] = minita;
 
-            for (posición = 99; posición > 0; posición--)
+            for (posición = 80; posición > 0; posición--)
             {
                 recorrido = Randoms.Next(posición);
                 temporal = mt[recorrido];
                 mt[recorrido] = mt[posición];
                 mt[posición] = temporal;
             }
+
+            for (int minita = 0; minita < 15; minita++)
+                mn[minita] = mt[minita]; 
+            for (int minita = 0; minita < 81; minita++)
+                mt[minita] = 0; 
+            for (int minita = 0; minita < 15; minita++) 
+                mt[mn[minita]] = 5;
         }
 
 
