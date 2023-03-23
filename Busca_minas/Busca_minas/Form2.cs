@@ -122,7 +122,8 @@ namespace Busca_minas
             {
                 if (matriz_e[t] != 9)
                 {
-                    minas_encontradas = 0; filas = t / 9; 
+                    minas_encontradas = 0; 
+                    filas = t / 9; 
                     columnas_pos = t % 9;
 
                     for (int v = 0; v < 8; v++)
@@ -130,7 +131,7 @@ namespace Busca_minas
 
                         minas_x = filas + calcular_area_x[v];
                         minas_y = columnas_pos + calcular_area_y[v];
-                        minas_posicion= 9 * minas_x+ minas_y;
+                        minas_posicion= 9 * minas_x + minas_y;
                         if (minas_posicion > -1 && minas_posicion < 81 && matriz_e[minas_posicion] == 9) minas_encontradas++;
                     }
                     matriz_e[t] = minas_encontradas;
