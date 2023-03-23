@@ -15,14 +15,16 @@ namespace Busca_minas
     {
 
         private int cronometro; //variable para el conometro
-        int[] mt = new int[82];// matriz de estado
+        int[] matriz_e = new int[82];// matriz de estado
         Random Randoms = new Random();
-        int[] mn = new int[15];// posiciones de las minas
+        int[] minas_pos = new int[15];// posiciones de las minas
+        int[] calcular_area_x = new int[8] { -1, 0, 1, 1, 1, 0, -1, -1 };// calcular el area donde se encuentra la bomba
+        int[] calcular_area_y =new int[8] { -1, -1, -1, 0, 1, 1, 1, 0 };// y
 
         public Form2()
         {
             InitializeComponent();
-            cronometro= 0;
+            cronometro = 0;
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -36,12 +38,12 @@ namespace Busca_minas
             int bandera = 0;
             int iteracion = 55;
             int numeroma = 1;
-            
+
 
             while (bandera <= 8)
             {
                 int sumax = 1;
-                
+
 
                 for (int x = 1; x <= 9; x++)
                 {
@@ -56,14 +58,15 @@ namespace Busca_minas
                     numeroma = numeroma + 1;
                 }
                 iteracion = iteracion + 40;//al terminar el ciclo for se le sumara 40 para que baje
-                //a la otra linea y como la vandera sigue verdadera repetira el proceso
-                
+                                           //a la otra linea y como la vandera sigue verdadera repetira el proceso
+
                 bandera = bandera + 1;
 
 
                 minas();
+                area();
 
-                foreach (System.Windows.Forms.Control ctrl in this.Controls) ctrl.Text = (Convert.ToString(mt[ctrl.TabIndex]));
+                foreach (System.Windows.Forms.Control ctrl in this.Controls) ctrl.Text = (Convert.ToString(matriz_e[ctrl.TabIndex]));
             }
 
             Random rnd = new Random();
@@ -80,22 +83,22 @@ namespace Busca_minas
 
         private void minas()
         {
-            for (int minita = 0; minita < 81; minita++) mt[minita] = minita;
+            for (int minita = 0; minita < 81; minita++) matriz_e[minita] = minita;
 
             for (posición = 80; posición > 0; posición--)
             {
                 recorrido = Randoms.Next(posición);
-                temporal = mt[recorrido];
-                mt[recorrido] = mt[posición];
-                mt[posición] = temporal;
+                temporal = matriz_e[recorrido];
+                matriz_e[recorrido] = matriz_e[posición];
+                matriz_e[posición] = temporal;
             }
 
             for (int minita = 0; minita < 15; minita++)
-                mn[minita] = mt[minita]; 
+                minas_pos[minita] = matriz_e[minita];
             for (int minita = 0; minita < 81; minita++)
-                mt[minita] = 0; 
-            for (int minita = 0; minita < 15; minita++) 
-                mt[mn[minita]] = 5;
+                matriz_e[minita] = 0;
+            for (int minita = 0; minita < 15; minita++)
+                matriz_e[minas_pos[minita]] = 9;
         }
 
 
@@ -110,6 +113,32 @@ namespace Busca_minas
             this.Close();
         }
 
+        private void area()
+        {
+            int minas_encontradas, filas, columnas_pos; // minas enncontradas en el area mv, filas f, columnas_pos c
+            int minas_x, minas_y, minas_posicion; // minas_x vx, minas_y vy, minas_posicion pv
 
+            for (int t = 0; t < 81; t++)
+            {
+                if (matriz_e[t] != 9)
+                {
+                    minas_encontradas = 0; filas = t / 9; 
+                    columnas_pos = t % 9;
+
+                    for (int v = 0; v < 8; v++)
+                    {
+
+                        minas_x = filas + calcular_area_x[v];
+                        minas_y = columnas_pos + calcular_area_y[v];
+                        minas_posicion= 9 * minas_x+ minas_y;
+                        if (minas_posicion > -1 && minas_posicion < 81 && matriz_e[minas_posicion] == 9) minas_encontradas++;
+                    }
+                    matriz_e[t] = minas_encontradas;
+                }
+                
+                
+            }
+        }
     }
+
 }
