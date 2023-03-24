@@ -57,11 +57,11 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(287, 271);
+            this.button2.Location = new System.Drawing.Point(214, 290);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(228, 41);
+            this.button2.Size = new System.Drawing.Size(369, 41);
             this.button2.TabIndex = 2;
-            this.button2.Text = "Nos vamos a la mrda x2";
+            this.button2.Text = "ME LLEVA LA VERGA Y NO LA QUE QUIERO";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
