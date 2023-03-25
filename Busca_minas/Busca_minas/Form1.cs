@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -19,11 +20,13 @@ namespace Busca_minas
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Form2 ventana = new Form2(); // Esto es para abrir otra ventana
+            Form2 ventana = new Form2(); // esto es para abrir otra ventana
             ventana.Show();
             Form1 cierre = new Form1();
             cierre.Close();
-            //this.Close();
+
+            // this.Close();
+
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -32,6 +35,12 @@ namespace Busca_minas
             ventana.Show();
             Form1 cierre = new Form1();
             cierre.Close();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Form4 ventana = new Form4(); // Esto es para abrir otra ventana
+            ventana.Show();
         }
     }
 }
