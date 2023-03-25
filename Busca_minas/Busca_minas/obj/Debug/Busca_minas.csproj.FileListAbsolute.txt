@@ -11,3 +11,16 @@ C:\Users\patri\OneDrive\Desktop\Busca_minas\Busca_minas\Busca_minas\obj\Debug\Bu
 C:\Users\patri\OneDrive\Desktop\Busca_minas\Busca_minas\Busca_minas\obj\Debug\Busca_minas.exe
 C:\Users\patri\OneDrive\Desktop\Busca_minas\Busca_minas\Busca_minas\obj\Debug\Busca_minas.pdb
 C:\Users\patri\OneDrive\Desktop\busca_minas\Busca_minas\Busca_minas\obj\Debug\Busca_minas.Form3.resources
+C:\Users\Personal\OneDrive - Universidad Panamericana UPANA\Escritorio\Buscaminas2\Busca_minas\Busca_minas\bin\Debug\Busca_minas.exe.config
+C:\Users\Personal\OneDrive - Universidad Panamericana UPANA\Escritorio\Buscaminas2\Busca_minas\Busca_minas\bin\Debug\Busca_minas.exe
+C:\Users\Personal\OneDrive - Universidad Panamericana UPANA\Escritorio\Buscaminas2\Busca_minas\Busca_minas\bin\Debug\Busca_minas.pdb
+C:\Users\Personal\OneDrive - Universidad Panamericana UPANA\Escritorio\Buscaminas2\Busca_minas\Busca_minas\obj\Debug\Busca_minas.csproj.AssemblyReference.cache
+C:\Users\Personal\OneDrive - Universidad Panamericana UPANA\Escritorio\Buscaminas2\Busca_minas\Busca_minas\obj\Debug\Busca_minas.csproj.SuggestedBindingRedirects.cache
+C:\Users\Personal\OneDrive - Universidad Panamericana UPANA\Escritorio\Buscaminas2\Busca_minas\Busca_minas\obj\Debug\Busca_minas.Form1.resources
+C:\Users\Personal\OneDrive - Universidad Panamericana UPANA\Escritorio\Buscaminas2\Busca_minas\Busca_minas\obj\Debug\Busca_minas.Form2.resources
+C:\Users\Personal\OneDrive - Universidad Panamericana UPANA\Escritorio\Buscaminas2\Busca_minas\Busca_minas\obj\Debug\Busca_minas.Form3.resources
+C:\Users\Personal\OneDrive - Universidad Panamericana UPANA\Escritorio\Buscaminas2\Busca_minas\Busca_minas\obj\Debug\Busca_minas.Properties.Resources.resources
+C:\Users\Personal\OneDrive - Universidad Panamericana UPANA\Escritorio\Buscaminas2\Busca_minas\Busca_minas\obj\Debug\Busca_minas.csproj.GenerateResource.cache
+C:\Users\Personal\OneDrive - Universidad Panamericana UPANA\Escritorio\Buscaminas2\Busca_minas\Busca_minas\obj\Debug\Busca_minas.csproj.CoreCompileInputs.cache
+C:\Users\Personal\OneDrive - Universidad Panamericana UPANA\Escritorio\Buscaminas2\Busca_minas\Busca_minas\obj\Debug\Busca_minas.exe
+C:\Users\Personal\OneDrive - Universidad Panamericana UPANA\Escritorio\Buscaminas2\Busca_minas\Busca_minas\obj\Debug\Busca_minas.pdb

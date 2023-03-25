@@ -82,7 +82,7 @@ namespace Busca_minas
                         ctrl.Text = "💣";
                         timer1.Enabled = false;
                         SoundPlayer Player = new SoundPlayer();
-                        Player.SoundLocation = "C:/Users/patri/OneDrive/Desktop/Busca_minas/Busca_minas/Busca_minas/musica/Bomba_1.wav";
+                        Player.SoundLocation = "C:/Users/Personal/OneDrive - Universidad Panamericana UPANA/Escritorio/Buscaminas2/Busca_minas/Busca_minas/musica/Bomba_1.wav";
                         Player.Play();
                     }
                 }
