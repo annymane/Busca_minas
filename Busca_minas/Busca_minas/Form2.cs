@@ -166,5 +166,12 @@ namespace Busca_minas
                 currentButton.Text = "🚩";
             }
         }
+
+        private void inicioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            Form2 ventana = new Form2(); // esto es para abrir otra ventana
+            ventana.Show();
+        }
     }
 }
