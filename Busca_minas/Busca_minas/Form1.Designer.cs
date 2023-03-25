@@ -47,22 +47,27 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(287, 159);
+            this.button1.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.button1.Font = new System.Drawing.Font("Snap ITC", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(278, 160);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(228, 41);
             this.button1.TabIndex = 1;
-            this.button1.Text = "NOS VAMOS A LA MIERDA";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Text = "Fácil";
+            this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(214, 290);
+            this.button2.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.button2.Font = new System.Drawing.Font("Snap ITC", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.button2.Location = new System.Drawing.Point(278, 259);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(369, 41);
+            this.button2.Size = new System.Drawing.Size(228, 46);
             this.button2.TabIndex = 2;
-            this.button2.Text = "ME LLEVA LA VERGA Y NO LA QUE QUIERO";
-            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Text = "Intermedio";
+            this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // Form1
