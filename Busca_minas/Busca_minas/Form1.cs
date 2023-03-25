@@ -36,5 +36,11 @@ namespace Busca_minas
             Form1 cierre = new Form1();
             cierre.Close();
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Form4 ventana = new Form4(); // Esto es para abrir otra ventana
+            ventana.Show();
+        }
     }
 }
