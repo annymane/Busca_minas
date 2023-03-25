@@ -52,7 +52,7 @@ namespace Busca_minas
                     this.Controls.Add(miboton);
                     sumax = sumax + 40;
                     numeroma = numeroma + 1;
-
+                    miboton.MouseDown += new MouseEventHandler(Form2_MouseDown);
                 }
 
                 iteracion = iteracion + 40;
@@ -60,17 +60,13 @@ namespace Busca_minas
             minas();
             area();
 
-
-
-                foreach (System.Windows.Forms.Control ctrl in this.Controls) ctrl.Text = (Convert.ToString(matriz_e[ctrl.TabIndex]));
-
             Random rnd = new Random();
 
         }
 
         private void miBoton_Click(object sender, EventArgs e)
         {
-            timer1.Enabled = false;
+            timer1.Enabled = true;
 
             int t = ActiveControl.TabIndex;
             if (matriz_e[t] != 9)
@@ -82,7 +78,8 @@ namespace Busca_minas
                     if (matriz_e[ta] == 9)
                     {
                         ctrl.ForeColor = Color.Red;
-                        ctrl.Text = "*";
+                        ctrl.Text = "💣";
+                        timer1.Enabled = false;
                     }
                 }
 
@@ -150,6 +147,20 @@ namespace Busca_minas
                 
             }
         }
-    }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            foreach (System.Windows.Forms.Control ctrl in this.Controls) ctrl.Text = (Convert.ToString(matriz_e[ctrl.TabIndex]));
+
+        }
+
+        private void Form2_MouseDown(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Right)
+            {
+                Button currentButton = (Button)sender;
+                currentButton.Text = "🚩";
+            }
+        }
+    }
 }
