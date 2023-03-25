@@ -74,9 +74,9 @@ namespace Busca_minas
                         ctrl.ForeColor = Color.Red;
                         ctrl.Text = "💣";
                         timer1.Enabled = false;
-                        //SoundPlayer Player = new SoundPlayer();
-                        //Player.SoundLocation = "C:/Users/patri/OneDrive/Desktop/Busca_minas/Busca_minas/Busca_minas/musica/Bomba_1.wav";
-                        //Player.Play();
+                        SoundPlayer Player = new SoundPlayer();
+                        Player.SoundLocation = "C:/Users/patri/OneDrive/Desktop/Busca_minas/Busca_minas/Busca_minas/musica/Bomba_1.wav";
+                        Player.Play();
                     }
                 }
 
@@ -158,6 +158,14 @@ namespace Busca_minas
         private void button1_Click_1(object sender, EventArgs e)
         {
             foreach (System.Windows.Forms.Control ctrl in this.Controls) ctrl.Text = (Convert.ToString(matriz_e[ctrl.TabIndex]));
+        }
+
+        private void inicioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            
+            this.Close();
+            Form4 form = new Form4();
+            form.Show();
         }
     }
 }
