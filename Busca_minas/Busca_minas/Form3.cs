@@ -144,11 +144,6 @@ namespace Busca_minas
             }
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            foreach (System.Windows.Forms.Control ctrl in this.Controls) ctrl.Text = (Convert.ToString(matriz_e[ctrl.TabIndex]));
-
-        }
 
         private void Form3_MouseDown(object sender, MouseEventArgs e)
         {
@@ -171,6 +166,11 @@ namespace Busca_minas
             this.Close();
             Form3 ventana = new Form3(); 
             ventana.Show();
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            foreach (System.Windows.Forms.Control ctrl in this.Controls) ctrl.Text = (Convert.ToString(matriz_e[ctrl.TabIndex]));
         }
     }
 }
