@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Media;
 
 namespace Busca_minas
 {
@@ -80,6 +81,9 @@ namespace Busca_minas
                         ctrl.ForeColor = Color.Red;
                         ctrl.Text = "💣";
                         timer1.Enabled = false;
+                        SoundPlayer Player = new SoundPlayer();
+                        Player.SoundLocation = "C:/Users/patri/OneDrive/Desktop/Busca_minas/Busca_minas/Busca_minas/musica/Bomba_1.wav";
+                        Player.Play();
                     }
                 }
 
